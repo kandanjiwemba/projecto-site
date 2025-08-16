@@ -48,6 +48,67 @@ p {
     margin-bottom: 1rem;
 }
 
+/* Tema escuro */
+.dark-theme {
+    background-color: #1a1a1a;
+    color: #fff;
+}
+
+.dark-theme article {
+    background-color: #2d2d2d;
+    box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+
+.dark-theme h2 {
+    color: #fff;
+}
+
+/* Animações dos artigos */
+.article-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+
+.article-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Botões */
+button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #34495e;
+}
+
+/* Expansão do artigo */
+article p {
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+article.expanded p {
+    max-height: 1000px;
+}
+
+#toggleTheme {
+    margin: 1rem 0;
+}
+
+.read-more {
+    margin-top: 1rem;
+}
+
 @media (max-width: 768px) {
     header {
         padding: 1rem 0;
